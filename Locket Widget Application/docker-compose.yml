@@ -1,0 +1,11 @@
+services:
+  php-apache:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Use the custom Dockerfile
+    container_name: php-apache
+    ports:
+      - "8085:80"
+    volumes:
+      - ./src:/var/www/html  # Mount your application code here
+
